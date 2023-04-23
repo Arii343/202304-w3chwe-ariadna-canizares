@@ -9,7 +9,7 @@ class HeaderComponent extends Component {
 
   renderHtml(): void {
     this.element.innerHTML = `
-      <img src="./img/pokemon-logo.svg" alt="logo Pokémon"></img>
+      <img class="logo" src="./img/pokemon-logo.svg" alt="logo Pokémon"></img>
       <nav class="navbar">
         <ul class="navbar__list">
           <li class="navbar__item"> <a class="navbar__link">Todos los Pokémon</a> </li>
