@@ -1,4 +1,5 @@
 import Component from "../Component/Component.js";
+import HeaderComponent from "../HeaderComponent/HeaderComponent.js";
 
 class AppComponent extends Component {
   constructor(parentElement: Element) {
@@ -7,7 +8,9 @@ class AppComponent extends Component {
     this.renderHtml();
   }
 
-  renderHtml(): void {}
+  renderHtml(): void {
+    new HeaderComponent(this.element);
+  }
 }
 
 export default AppComponent;
