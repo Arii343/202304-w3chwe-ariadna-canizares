@@ -4,6 +4,8 @@ import Component from "../Component/Component.js";
 const apiUrl = "https://pokeapi.co/api/v2/";
 
 class ListComponent extends Component {
+  private pokemons: PokemonApiResponse = {};
+
   constructor(parentElement: Element) {
     super(parentElement, "main", "main");
 
@@ -12,9 +14,11 @@ class ListComponent extends Component {
 
   async getPokemons(): Promise<void> {
     const response = await fetch(`${apiUrl}pokemon`);
-    const pokemons = (await response.json()) as PokemonApiResponse[];
+    const pokemons = (await response.json()) as PokemonApiResponse;
 
-    console.log("pokemons", pokemons);
+    this.pokemons = pokemons;
+
+    this.renderHtml();
   }
 
   renderHtml(): void {
