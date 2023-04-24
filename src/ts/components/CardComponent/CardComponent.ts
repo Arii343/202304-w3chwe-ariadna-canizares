@@ -21,7 +21,7 @@ class CardComponent extends Component {
   renderHtml(): void {
     this.element.innerHTML = `
     <header class="card__header">
-      <span class="card__text">Num: ${this.pokemon.id}</span>
+      <span class="card__text">#${this.pokemon.id}</span>
       <span class="card__title">${this.pokemon.name}</span>
     </header>
     <main class="card__main">
